@@ -14,6 +14,36 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
+	<build>
+	<pluginManagement>
+	<plugins>
+		<plugin>
+		<!-- Source: https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>3.14.1</version>		
+		</plugin>
+		
+		<plugin>
+		<!-- Source: https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.5.4</version>
+    <configuration>
+    <suiteXmlFiles>
+    <suteXmlFile>testng.xml</suteXmlFile>
+    </suiteXmlFiles>
+    </configuration>
+		</plugin>
+	
+	
+	</plugins>
+	
+	</pluginManagement>
+	</build>
+	
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -84,8 +114,6 @@
     <artifactId>extentreports</artifactId>
     <version>5.1.2</version>
 </dependency>
-  <!-- https://mvnrepository.com/artifact/org.zaproxy/zap -->
-
  </dependencies>
 </project>
 
